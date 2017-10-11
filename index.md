@@ -1,11 +1,12 @@
-#Nathan's Portfolio
+
+## Nathan's Portfolio github page
 
 
-##Starting with HomeWork1
+## Starting with HomeWork1
 
-With home work 1 we had seven Primary Objectives which were:
+With home work 1 we had seven Primary Objectives which were
 
-1.Learn Git:'init', 'add', 'commit', 'status', 'log','config', 'remote', 'fetch', 'pull', and 'push'.
+1.Learn Git: 'init' ,  'add' ,  'commit'  ,  'status' ,  'log' , 'config' ,  'remote' ,  'fetch' ,  'pull' , and  'push' .
 2.Learn about remote repositories with Bitbucket, Github or GitLab
 3.Learn HTML
 5.Learn CSS

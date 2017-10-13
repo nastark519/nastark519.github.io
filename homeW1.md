@@ -322,29 +322,29 @@
 		
    + ##### Bootstrap
    For Bootstrap I added in the navigation bar as seen below.
-    ```bootstrap
-    <nav class="navbar navbar-default">
-		<div class="container-fluid">
-			<div class="navbar-header">
-				<a class="navbar-brand">NATHANSTARK</a>
+		```
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand">NATHANSTARK</a>
+				</div>
+				<div>
+					<ul class="nav navbar-nav">
+					  <li class="active"><a href="index.html">Home</a></li>
+					  <li><a href="resume.html">resume</a></li>
+					  <li><a href="hobbies.html">Hobbies</a></li>
+					  <li><a href="references.html">References</a></li>
+					</ul>
+				</div>
 			</div>
-			<div>
-				<ul class="nav navbar-nav">
-				  <li class="active"><a href="index.html">Home</a></li>
-				  <li><a href="resume.html">resume</a></li>
-				  <li><a href="hobbies.html">Hobbies</a></li>
-				  <li><a href="references.html">References</a></li>
-				</ul>
-			</div>
-		</div>
-	</nav>
-    ```
-    I made sure that the page that you were on would be set to a class as active to make the webpage more user friendly.
-    Bootstraps style was added and made the page look quite nice.
-    ```bootstrap
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    ```
+		</nav>
+		```
+	I made sure that the page that you were on would be set to a class as active to make the webpage more user friendly.
+	Bootstraps style was added and made the page look quite nice.
+		```
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+		```
     I also used the bootstrap script.
-    ```bootstrap
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    ```
+		```
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		```

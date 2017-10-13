@@ -1,5 +1,5 @@
 
- # Home Work One
+# Home Work One
  
 ### Learning Git and its commands.
 + I already had the git bash downloaded onto my lab top and I have used it to make a README file for a "hello world" repository, but I had not really gotten into any of the power of git. I learned several commands such as:
@@ -238,3 +238,113 @@
    Here I though in a ordered list and a description list of thinks to help people get to know me better.
    
    + ##### CSS
+        ```css
+        #container {
+    	width: 800px;
+    	margin-left: auto;
+    	margin-right: auto;
+    	background-color: #0074D9;
+        }
+        
+        #header {
+    	margin-left: 50px;
+    	margin-right: 50px;
+    	text-align: center;
+    	background-color: #DDD;
+        }
+    
+        #objec{
+    	width: 1000px;
+    	margin-left: auto;
+    	margin-right: auto;
+    	text-align: center;
+        }
+    
+        #workHistory{
+    	margin-left: 50px;
+    	margin-right: auto;
+        }
+    
+        #specialize{
+    	padding-right:200px;
+    	margin-left: 50px;
+    	margin-right 50px;
+    	margin-bottom: 350px;
+        }
+    	
+        #education{
+    	margin-left: auto;
+    	margin-right: auto;
+    	float: left;
+    	
+        }
+    
+        #skills{
+    	margin-right: auto;
+    	margin-left: auto;
+    	float: right;
+        }
+        
+        #explanation,
+        html{
+    	min-hieght: 100%;
+        }
+        
+        #explanation{
+    	padding-top: 250px;
+    	padding-bottom: 500px;
+    	background-image: url("http://nastark519.github.io/HW460/AmandaandNathanWedding301.JPG");
+    	background-repeat: no-repeat;
+    	background-size: cover;
+        }
+        ```
+        Here I have my css code. Note that I have used both `id`s and I have used one `class` (`topper`). I used this class to explore more of what css cares about. turns out css does not care much between the two. I did more reading about this at <https://css-tricks.com/the-difference-between-id-and-class/>.
+        ```css
+        .topper{
+    	font-family: Courier New, Georgia;
+    	text-align: center;
+    	color: #FFF;
+        }
+        #entertainment{
+    	padding: 50px;
+        }
+    
+        #ranking{
+    	float: right;
+        }
+        #occupy{
+    	float: left;
+        }
+        #references{
+    	background-color: pink;
+        }
+        ```
+		
+   + ##### Bootstrap
+   For Bootstrap I added in the navigation bar as seen below.
+    ```bootstrap
+    <nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand">NATHANSTARK</a>
+			</div>
+			<div>
+				<ul class="nav navbar-nav">
+				  <li class="active"><a href="index.html">Home</a></li>
+				  <li><a href="resume.html">resume</a></li>
+				  <li><a href="hobbies.html">Hobbies</a></li>
+				  <li><a href="references.html">References</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+    ```
+    I made sure that the page that you were on would be set to a class as active to make the webpage more user friendly.
+    Bootstraps style was added and made the page look quite nice.
+    ```bootstrap
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    ```
+    I also used the bootstrap script.
+    ```bootstrap
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    ```

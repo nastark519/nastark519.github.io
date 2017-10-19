@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+	<head>
+	
+	<title>js1</title>
+	
+	</head>
+	
+	<body>
+	
+	Here is my first text box.
+	<input id="textBox1" type="text" value="" />
+	
+	<button onclick="sayHello()">Submit</button>
+	
+	<p id="hello"></p>
+	
+	<script type="text/javascript">
+	function sayHello(){
+		var x = document.getElementById("textBox1").value;
+		if( x != NULL){
+			document.getElementById("hello").innerHTML = "Hello " + x + " how are you doing today?";
+			}
+	}
+	</script>
+	</body>
+
+</html>

@@ -9,7 +9,7 @@
 	<body>
 	
 	Here is my first text box.
-	<input id="textBox1" type="text" value="" />
+	<input id="textBox1" type="text" value=""/>
 	
 	<button onclick="sayHello()">Submit</button>
 	
@@ -18,7 +18,7 @@
 	<script type="text/javascript">
 	function sayHello(){
 		var x = document.getElementById("textBox1").value;
-		if( x != NULL){
+		if( x != ""){
 			document.getElementById("hello").innerHTML = "Hello " + x + " how are you doing today?";
 			}
 	}

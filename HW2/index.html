@@ -3,19 +3,23 @@
 	<head>
 	
 	<title>js1</title>
-	
+	<link rel="stylesheet" type="text/css" href="style.css" />
 	</head>
 	
 	<body>
-	
-	Here is my first text box.
-	<input id="textBox1" type="text" value=""/>
-	
-	<button onclick="sayHello()">Submit</button>
-	
-	<p id="hello"></p>
-	
-	<script type="text/javascript">
+	<div id="container">
+		<div id="inputBox">
+		Here is my first text box.
+		<input id="textBox1" type="text" value=""/>
+		
+		<button id="sayHello">Submit</button>
+		</div>
+		
+		<div id="welcome">
+		</div>
+		
+	<!--
+    <script type="text/javascript">
 	function sayHello(){
 		var x = document.getElementById("textBox1").value;
 		if( x != ""){
@@ -23,6 +27,10 @@
 			}
 	}
 	</script>
+	-->
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript" src="myJQ.js"></script>
 	</body>
 
 </html>

@@ -29,9 +29,21 @@ $(document).ready(function(){
 	});
 	
 	$("#welcome").on('click',"#okay",function() {
-		$("#okayHit").html("it worked okay");
+		$("#okayHit").html("<strong>Fun things to do:</strong>" + 
+					"<ul id='lis'>" +
+					  "<li>Go for a walk</li>" +
+					  "<li>Read a book</li>" +
+					  "<li>Do you home work</li>" +
+					"</ul>" +
+					"Not enough here are some more ideas.</br>" +
+					" <button id='more'>MORE?</>");
 		
 		$("#welcome").hide();
+		
+	});
+	//adding list items.
+	$("#okayHit").on('click', "#more", function(){
+		$("#lis").append("<li>it worked</li>");
 		
 	});
 	

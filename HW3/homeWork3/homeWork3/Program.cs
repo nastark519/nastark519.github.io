@@ -74,7 +74,8 @@ namespace homeWork3
     interface IStackADT
     {
         /*I see here that the comment style is differant than
-         * Java.*/
+         * Java.(i.e. I don't have /** comment.)*/
+
         /* Push an Obj onto the top of the stack. Pushing an Obj
          * that does not exist throws an error and should not succeed.
          * Pushing an obj that is not an item should be an error
@@ -85,6 +86,14 @@ namespace homeWork3
          * @return A reference to the obj that was pushed.
         */
         object Push(object newItem);
+
+        /* Remove and return the top item on the stack. This operation should 
+	     * result in an error if the stack is empty. Returns a reference of the 
+	     * item removed.
+         * @return THe reference that was popped from the stack or null
+         *     if the stack was empty.
+         */
+        object Pop();
 
         /*
          */

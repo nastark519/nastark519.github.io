@@ -59,10 +59,36 @@ namespace homeWork3
         public string EvaluatePostFixInput(string input)
         {
             if (input == null || input == "")
-            {
+            {/*found answer here:
+              * social.msdn.microsoft.com/Forums/vstudio/en-US/8e04e18f-398b-4000-bc4e-6a15c67db653/equivalent-of-illegalargumentexception-in-c?forum=csharpgeneral */
 
+                throw new ArgumentException("Null or the empty string are not valid postfix expressions.");
             }
+            //here I need to go back and see what we can use for the stack.
+
             return "";
         }
     }
+
+    //Note that C# VS asked me to prefix an I for my interface.
+    interface IStackADT
+    {
+        /*I see here that the comment style is differant than
+         * Java.*/
+        /* Push an Obj onto the top of the stack. Pushing an Obj
+         * that does not exist throws an error and should not succeed.
+         * Pushing an obj that is not an item should be an error
+         * This operation should return a reference to the item
+         * pushed so as that item should be able to be used.
+         * @param newItem the obj to push onto the top of the
+         * stack.
+         * @return A reference to the obj that was pushed.
+        */
+        object Push(object newItem);
+
+        /*
+         */
+
+    }
+
 }

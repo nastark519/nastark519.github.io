@@ -71,6 +71,7 @@ namespace homeWork3
     }
 
     //Note that C# VS asked me to prefix an I for my interface.
+    //The stack inerface is done here.
     interface IStackADT
     {
         /*I see here that the comment style is differant than
@@ -96,8 +97,82 @@ namespace homeWork3
         object Pop();
 
         /*
+         * Return thetop item from the stack but does not remove it
+         * If the stack is empty an error should be thrown or 
+         * an acceptable alternative is returned which the user can
+         * use to check is the stack is empty.
+         * @return A reference to the item at the top of the stack
+         *      or null if the stack is empty.
+         */
+        object Peek();
+
+        /*Ask if the stack is empty. No error produced.
+         * @return true if the stack is empty, false otherwise.
+         */
+        bool IsEmpty();
+
+        /*Reset the stack by emptying it. The exact technique used to clear
+         * the stack is up to the implementor. The user should pay attention to 
+         * this behavior is.
+         */
+        void Clear();
+    }
+    // Now that the interface is done I need to move on to the 
+    //LinkedStack that implements the IStackADT.
+
+    class LinkedStack // learn here and looking ahead I will need to write the Node class....
+    {
+
+    }
+
+    /*This is the Node class.
+     */
+    class Node
+    {
+        public object data;
+        public Node next;
+
+        /*Defult constructor.
+         * Sets up a empty Node. 
+         */
+        public Node()
+        {
+            data = null;
+            next = null;
+        }
+
+        /*non-defult constructor.
+         * Sets up a Node with data
+         * and a next for the sake of pointing. 
+         */
+        public Node(object data, Node next)
+        {//look up get; set; for C#
+            this.data = data;
+            this.next = next;
+        }
+
+        /* Here we are to setup a the accessors
+         * for the fields.
+         * For futher understanding I have found
+         * this page for greater understanding.
+         * stackoverflow.com/questions/6554210/what-is-the-purpose-of-accessors
          */
 
+        /* Accessor for the data in the Node.
+         * I need further explation here.
+         */
+        public object Data
+        {
+            get { return data; }
+            set { data = value; }
+        }
+
+        /* Accessor for the next Node.
+         */
+        public Node Next
+        {
+            get { return next; }
+        }
     }
 
 }

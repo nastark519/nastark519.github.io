@@ -163,15 +163,15 @@ namespace homeWork3
          */
         public object Data
         {
-            get { return data; }
-            set { data = value; }
+            get;//so this is a gamble banking on the v. of C# that we are using is 3.0 and up.
+            set;//v. of C# that we are using is 3.0 and up. No errors are seen so I guess we are.
         }
 
         /* Accessor for the next Node.
          */
         public Node Next
         {
-            get { return next; }
+            get;
         }
     }
 

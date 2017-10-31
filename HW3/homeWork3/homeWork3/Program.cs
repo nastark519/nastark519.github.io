@@ -111,18 +111,45 @@ namespace homeWork3
                         throw new ArgumentException("Improper input format. Stack became empty when expecting first operand.");
                     }
                     a = (Convert.ToDouble(stack.Pop()));
-                    //c = DoOperation(a, b, s);
+                    c = DoOperation(a, b, s);
+                    stack.Push(Convert.ToDouble(c));
                 }
-            }
+            }//end foreach
 
 
-            return "";
+            return Convert.ToString(stack.Pop());
         }
 
         public double DoOperation(double a, double b, string s)
         {
+            double c = 0.0;
+            if (s == "+")
+                c = ( a + b );
+            else if (s == "-")
+                c = ( a - b );
+            else if (s == "*")
+                c = ( a * b );
+            else if(s == "/")
+            {
+                try
+                {
+                    c = (a / b);
+                    if(c == double.NegativeInfinity || c == double.PositiveInfinity)
+                    {
+                        throw new ArgumentException("Can't divide by zero");
+                    }
+                }
+                catch (ArithmeticException e)
+                {
+                    throw new ArgumentException(e.Message);
+                }
+            }
+            else
+            {
+                throw new ArgumentException("Improper operator: " + s + ", is not one of +, -, *, or /");
+            }
 
-            return 0.0;
+            return c;
         }
     }
 

@@ -8,6 +8,10 @@ namespace homeWork3
 {
     class Calculator
     {
+        private IStackADT stack = new LinkedStack();
+
+        /*Here note that we do not us a scanner C# has another
+        way to go about this*/
 
         static void Main(string[] args)
         {
@@ -20,26 +24,33 @@ namespace homeWork3
                 playAgain = app.DoCalculation();
             }
             Console.WriteLine("SEE YA.");
-            /*int i;
-            bool isVal = int.TryParse(Console.ReadLine(),out i);
-            if (isVal)
-            {
-                Console.WriteLine(">>" + i + "\n");
-            }*/
+
+
+            /*this is old code for testing purposes.
+             * int i;
+             * bool isVal = int.TryParse(Console.ReadLine(),out i);
+             * if (isVal)
+             * {
+             * Console.WriteLine(">>" + i + "\n");
+             * }
+             */
         }
 
         private bool DoCalculation()
         {
             Console.WriteLine("Please enter q to quit\n");
+            //sInput stands for string input.
             string sInput = "2 2 +";
             Console.WriteLine(">");
 
             sInput = Console.ReadLine();
 
+            //check to see if user wants to quit.
             if (sInput[0] == 'q' || sInput[0] == 'Q')
             {
                 return false;
             }
+            
             string sOutput = "4";
             /*since the next step involes a try catch block
              * envolving evaluatePostFixInput() method 
@@ -64,9 +75,54 @@ namespace homeWork3
 
                 throw new ArgumentException("Null or the empty string are not valid postfix expressions.");
             }
-            //here I need to go back and see what we can use for the stack.
+            stack.Clear();
+
+            string s;
+            //you can do this in java see I am seeing if I can do it C#.
+            double a, b, c;
+
+            /* split the input into more workable peaces.
+             * such as the set {"22","33","+"} 
+             * but insted of a set its an array, which is even 
+             * better! yay!
+             */
+            string[] st = input.Split(' ');
+
+            foreach(string element in st)
+            {
+                if (double.TryParse(element, out a))
+                {
+                    stack.Push(Convert.ToDouble(element));
+                }
+                else
+                {//must be an operator or some other char or word.
+                    s = element;
+                    if (s.Length > 1)
+                    {
+                        throw new ArgumentException("Input Error: " + s + " is not an allowed number or operator.");
+                    }
+                    if (stack.IsEmpty())
+                    {
+                        throw new ArgumentException("Improper input format. Stack be came empty when expecting second operand.");
+                    }
+                    b = (Convert.ToDouble(stack.Pop()));
+                    if (stack.IsEmpty())
+                    {
+                        throw new ArgumentException("Improper input format. Stack became empty when expecting first operand.");
+                    }
+                    a = (Convert.ToDouble(stack.Pop()));
+                    //c = DoOperation(a, b, s);
+                }
+            }
+
 
             return "";
+        }
+
+        public double DoOperation(double a, double b, string s)
+        {
+
+            return 0.0;
         }
     }
 
@@ -120,9 +176,55 @@ namespace homeWork3
     // Now that the interface is done I need to move on to the 
     //LinkedStack that implements the IStackADT.
 
-    class LinkedStack // learn here and looking ahead I will need to write the Node class....
+    class LinkedStack : IStackADT
     {
+        private Node top;
 
+        public LinkedStack()
+        {
+            top = null;
+        }
+
+        public void Clear()
+        {
+            top = null;
+        }
+
+        public bool IsEmpty()
+        {
+            return top == null;
+        }
+
+        public object Peek()
+        {
+            if (IsEmpty())
+            {
+                return null;
+            }
+            return top.Data;
+        }
+
+        public object Pop()
+        {
+            if (IsEmpty())
+            {
+                return null;
+            }
+            object topItem = top.Data;
+            top = top.Next;
+            return topItem;
+        }
+
+        public object Push(object newItem)
+        {
+            if(newItem == null)
+            {
+                return null;
+            }
+            Node newNode = new Node(newItem, top);
+            top = newNode;
+            return newItem;
+        }
     }
 
     /*This is the Node class.
@@ -146,7 +248,7 @@ namespace homeWork3
          * and a next for the sake of pointing. 
          */
         public Node(object data, Node next)
-        {//look up get; set; for C#
+        {//look up get; set; for C# (see next comment)
             this.data = data;
             this.next = next;
         }

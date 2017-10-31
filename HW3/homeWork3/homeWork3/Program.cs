@@ -41,7 +41,7 @@ namespace homeWork3
             Console.WriteLine("Please enter q to quit\n");
             //sInput stands for string input.
             string sInput = "2 2 +";
-            Console.WriteLine(">");
+            Console.Write("> ");
 
             sInput = Console.ReadLine();
 
@@ -55,15 +55,27 @@ namespace homeWork3
             /*since the next step involes a try catch block
              * envolving evaluatePostFixInput() method 
              * I am going to move on to making that methon
-             * in my C# code*/
+             * in my C# code
+             */
+
+            try
+            {
+                sOutput = EvaluatePostFixInput(sInput);
+            }
+            catch (ArgumentException e)
+            {
+                sOutput = e.Message;
+            }
+
+            Console.WriteLine("\n\t>>" + sInput + " = " + sOutput);
 
             /*
-            bool isVal1 = int.TryParse(Console.ReadLine(), out input1);
-            if (!isVal1)
-            {
-                return false;
-            }
-            */
+             * bool isVal1 = int.TryParse(Console.ReadLine(), out input1);
+             * if (!isVal1)
+             * {
+             *     return false;
+             * }
+             */
             return true;
         }
 
@@ -80,6 +92,7 @@ namespace homeWork3
             string s;
             //you can do this in java see I am seeing if I can do it C#.
             double a, b, c;
+            double testTF;
 
             /* split the input into more workable peaces.
              * such as the set {"22","33","+"} 
@@ -90,7 +103,7 @@ namespace homeWork3
 
             foreach(string element in st)
             {
-                if (double.TryParse(element, out a))
+                if (double.TryParse(element, out testTF))
                 {
                     stack.Push(Convert.ToDouble(element));
                 }
@@ -228,7 +241,7 @@ namespace homeWork3
             {
                 return null;
             }
-            return top.Data;
+            return top.data;
         }
 
         public object Pop()
@@ -237,8 +250,8 @@ namespace homeWork3
             {
                 return null;
             }
-            object topItem = top.Data;
-            top = top.Next;
+            object topItem = top.data;
+            top = top.next;
             return topItem;
         }
 

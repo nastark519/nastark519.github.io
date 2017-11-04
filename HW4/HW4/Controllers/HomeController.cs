@@ -14,16 +14,19 @@ namespace HW4.Controllers
             return View();
         }
 
+        //GET: Page1
         public ActionResult Page1()
         {
             return View();
         }
 
+        //GET: Page2
         public ActionResult Page2()
         {
             return View();
         }
 
+        //GET: Page3
         public ActionResult Page3()
         {
             return View();

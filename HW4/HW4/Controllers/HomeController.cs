@@ -18,33 +18,36 @@ namespace HW4.Controllers
         [HttpGet]
         public ActionResult Page1()
         {
+            string answer = "Please enter a measurement and a temperature to start";
             string temp = Request.QueryString["tempet"];
-            if(!double.TryParse(temp, out double tempD))
+            /*tests to see if temp is valid. If it is it initializes 
+             * it an sets in in tempD => temperature as a double. If not valid
+             * return an message to the user.*/
+            if (!double.TryParse(temp, out double tempD))
             {
-                ViewBag.Message = "Please enter a measurement and a temperature to start";
+                ViewBag.Message = answer;
                 return View();
             }
-            
+            //mSyst is what messurement system they have to work with.
             string mSyst = Request.QueryString["sysM"];
-            string answer = "here";
-            ViewBag.RequestMethod = "GET";
+            //ViewBag.RequestMethod = "GET";
             double a, b;
 
-            if(mSyst == null || mSyst == "")
+            if (mSyst == null || mSyst == "")
             {
                 ViewBag.Message = "Please enter a measurement to start" + tempD;
                 return View();
             }
 
-            if(mSyst.ToLower() == "fahrenheit" || mSyst.ToLower() == "f")
+            if (mSyst.ToLower() == "fahrenheit" || mSyst.ToLower() == "f")
             {
-                a = (tempD - 32)*5/9;
+                a = (tempD - 32) * 5 / 9;
                 b = (tempD + 459.67) * 5 / 9;
                 answer = "To Celsius: " + a + " To Kelvin: " + b;
             }
-            else if(mSyst.ToLower() == "celsius" || mSyst.ToLower() == "c")
+            else if (mSyst.ToLower() == "celsius" || mSyst.ToLower() == "c")
             {
-                a = (tempD * 9 /5 ) + 32;
+                a = (tempD * 9 / 5) + 32;
                 b = (tempD + 273.15);
                 answer = "To Fahrenheit: " + a + " To Kelvin: " + b;
             }
@@ -60,7 +63,15 @@ namespace HW4.Controllers
         }
 
         //GET: Page2
+        [HttpGet]
         public ActionResult Page2()
+        {
+            return View();
+        }
+
+        //The post for page2.
+        [HttpPost]
+        public ActionResult Page2(FormCollection form)
         {
             return View();
         }

@@ -15,6 +15,7 @@ namespace HW4.Controllers
         }
 
         //GET: Page1
+        [HttpGet]
         public ActionResult Page1()
         {
             return View();

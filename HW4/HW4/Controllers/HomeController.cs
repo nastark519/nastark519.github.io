@@ -18,6 +18,29 @@ namespace HW4.Controllers
         [HttpGet]
         public ActionResult Page1()
         {
+            string temp = Request.QueryString["tempet"];
+            if(!double.TryParse(temp, out double tempD))
+            {
+                ViewBag.Message = "Please enter a measurement and a temperature to start";
+                return View();
+            }
+            
+            string mSyst = Request.QueryString["sysM"];
+            string answer = "here";
+            ViewBag.RequestMethod = "GET";
+
+            if(mSyst == null || mSyst == "")
+            {
+                ViewBag.Message = "Please enter a measurement to start" + tempD;
+                return View();
+            }
+
+            //if(mSyst.ToLower == "fahrenheit" || mSyst.ToLower == "f")
+            //{
+            //answer = "here";
+            //}
+
+            ViewBag.Message = answer;
             return View();
         }
 

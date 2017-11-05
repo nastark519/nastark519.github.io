@@ -28,6 +28,7 @@ namespace HW4.Controllers
             string mSyst = Request.QueryString["sysM"];
             string answer = "here";
             ViewBag.RequestMethod = "GET";
+            double a, b;
 
             if(mSyst == null || mSyst == "")
             {
@@ -35,10 +36,24 @@ namespace HW4.Controllers
                 return View();
             }
 
-            //if(mSyst.ToLower == "fahrenheit" || mSyst.ToLower == "f")
-            //{
-            //answer = "here";
-            //}
+            if(mSyst.ToLower() == "fahrenheit" || mSyst.ToLower() == "f")
+            {
+                a = (tempD - 32)*5/9;
+                b = (tempD + 459.67) * 5 / 9;
+                answer = "To Celsius: " + a + " To Kelvin: " + b;
+            }
+            else if(mSyst.ToLower() == "celsius" || mSyst.ToLower() == "c")
+            {
+                a = (tempD * 9 /5 ) + 32;
+                b = (tempD + 273.15);
+                answer = "To Fahrenheit: " + a + " To Kelvin: " + b;
+            }
+            else if (mSyst.ToLower() == "kelvin" || mSyst.ToLower() == "k")
+            {
+                a = (tempD - 273.15) * 1.8 + 32;
+                b = (tempD - 273.15);
+                answer = "To Fahrenheit: " + a + " To Celsius: " + b;
+            }
 
             ViewBag.Message = answer;
             return View();

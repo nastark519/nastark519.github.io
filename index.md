@@ -26,7 +26,7 @@ You may see my work done on this by visiting my repository [here](https://github
 
 ### HomeWork2
 
-With HomeWork 2 we had six Primary Objectives in making a web page which are listed below.
+With HomeWork 2 we had six Primary Objectives which are listed below.
 
 1. Learn Javascript
 2. Learn jQuery
@@ -41,6 +41,17 @@ You may see my work done on this by visiting my repository [here](https://github
 
 
 ### HomeWork3
+
+With HomeWork 3 we had three Primary Objectives which are listed below.
+
+1. Install and use Visual Studio
+2. Learn C#
+3. Be able to write a moderately complex C# console program using "C-sharpese"
+4. Continue to hone your Git skills
+
+
+You may see my work done on this by visiting my repository [here](https://github.com/nastark519/nastark519.github.io/tree/master/HW3/homeWork3/homeWork3) on github or:
++ For a walk through of my process: [HW1](/homeW3.md)
 
 
 ### HomeWork4

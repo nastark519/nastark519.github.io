@@ -136,7 +136,7 @@ namespace HW4.Controllers
             }
             e = i / 12;
             
-            if (double.TryParse(term, out double t))
+            if (!double.TryParse(term, out double t))
             {
                 ViewBag.Answer3 = "This shouldn't happen....";
                 return View();
@@ -144,7 +144,7 @@ namespace HW4.Controllers
             b = t* 12;
             c = (((Math.Pow((1 + e), b)) - 1) / (e * Math.Pow((1 + e), b)));
             
-            if (double.TryParse(amount, out double a))
+            if (!double.TryParse(amount, out double a))
             {
                 ViewBag.Answer3 = "This shouldn't happen....";
                 return View();

@@ -30,12 +30,11 @@ namespace HW4.Controllers
             }
             //mSyst is what messurement system they have to work with.
             string mSyst = Request.QueryString["sysM"];
-            //ViewBag.RequestMethod = "GET";
             double a, b;
 
             if (mSyst == null || mSyst == "")
             {
-                ViewBag.Message = "Please enter a measurement to start" + tempD;
+                ViewBag.AnswerMessage = "Please enter/n a measurement system with your tempeture to start.";
                 return View();
             }
 
@@ -58,7 +57,7 @@ namespace HW4.Controllers
                 answer = "To Fahrenheit: " + a + " To Celsius: " + b;
             }
 
-            ViewBag.Message = answer;
+            ViewBag.AnswerMessage = answer;
             return View();
         }
 

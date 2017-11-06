@@ -117,25 +117,43 @@ namespace HW4.Controllers
         }
 
         //GET: Page3
+        [HttpGet]
         public ActionResult Page3()
         {
             return View();
         }
 
         //POST: Page3
-        public ActionResult Page3(double amount, double interest, double term)
+        [HttpPost]
+        public ActionResult Page3(string amount, string interest, string term)
         {
             //dummy vars for storing calcuations.
-            double a, b, c, d;
-            a = interest / 12;
-            b = term * 12;
-            c = (((Math.Pow((1 + a), b)) - 1) / (a * Math.Pow((1 + a), b)));
-            d = amount / c;
+            double e, b, c, d;
+            if (!double.TryParse(interest, out double i))
+            {
+                ViewBag.Answer3 = "This shouldn't happen....";
+                return View();
+            }
+            e = i / 12;
+            
+            if (double.TryParse(term, out double t))
+            {
+                ViewBag.Answer3 = "This shouldn't happen....";
+                return View();
+            }
+            b = t* 12;
+            c = (((Math.Pow((1 + e), b)) - 1) / (e * Math.Pow((1 + e), b)));
+            
+            if (double.TryParse(amount, out double a))
+            {
+                ViewBag.Answer3 = "This shouldn't happen....";
+                return View();
+            }
+            d = a / c;
 
             string explain = "The amount that you will have to pay back at the loans term end is: ";
 
-            ViewBag.Answer3 = explain + (d * a) + "";
-
+            ViewBag.Answer3 = explain + (d * e) + "";
             return View();
         }
     }

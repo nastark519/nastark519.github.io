@@ -6,8 +6,9 @@
 
 <h2>Tempeture convertion Calculator</h2>
 <p>This time I will be using a HttpPOST and my Collection form.</p>
-
-<form action="Page1" method="get">
+<!--here it took me about an hour to find out that I needed to 
+    change the method in the form to "post" for this to work.-->
+<form action="Page2" method="post">
     <lablel for="tempet">Tempeture:</lablel><br>
     <input type="text" name="tempet" value="">
     <br>
@@ -17,3 +18,7 @@
     <input type="submit" value="Submit">
     <br />
 </form> 
+
+<p><br/>
+    @ViewBag.AnswerMessage2
+    </p>

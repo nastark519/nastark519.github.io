@@ -25,7 +25,7 @@ namespace HW4.Controllers
              * return an message to the user.*/
             if (!double.TryParse(temp, out double tempD))
             {
-                ViewBag.Message = answer;
+                ViewBag.AnswerMessage = answer;
                 return View();
             }
             //mSyst is what messurement system they have to work with.
@@ -34,7 +34,7 @@ namespace HW4.Controllers
 
             if (mSyst == null || mSyst == "")
             {
-                ViewBag.AnswerMessage = "Please enter/n a measurement system with your tempeture to start.";
+                ViewBag.AnswerMessage = answer;
                 return View();
             }
 
@@ -61,17 +61,58 @@ namespace HW4.Controllers
             return View();
         }
 
-        //GET: Page2
+        /*GET: Page2 nothing will be added here just my basic
+         * get for page2 View.*/
         [HttpGet]
         public ActionResult Page2()
         {
             return View();
         }
 
-        //The post for page2.
+        /*The post for page2. this is where I am getting 
+         * all of my work done for step 5.*/
         [HttpPost]
         public ActionResult Page2(FormCollection form)
         {
+            string answer = "Please enter a measurement and a temperature to start";
+            string mSyst = form["sysM"];
+            //get the tempeture and check if its valid. 
+            string temp = form["tempet"];
+            if (!double.TryParse(temp, out double tempD))
+            {
+                ViewBag.AnswerMessage2 = answer;
+                return View();
+            }
+            //dummy vars to do my calc. converting.
+            double a, b;
+
+            if (mSyst == null || mSyst == "")
+            {
+                ViewBag.AnswerMessage2 = answer;
+                return View();
+            }
+
+            if (mSyst.ToLower() == "fahrenheit" || mSyst.ToLower() == "f")
+            {
+                a = (tempD - 32) * 5 / 9;
+                b = (tempD + 459.67) * 5 / 9;
+                answer = "To Celsius: " + a + " To Kelvin: " + b;
+            }
+            else if (mSyst.ToLower() == "celsius" || mSyst.ToLower() == "c")
+            {
+                a = (tempD * 9 / 5) + 32;
+                b = (tempD + 273.15);
+                answer = "To Fahrenheit: " + a + " To Kelvin: " + b;
+            }
+            else if (mSyst.ToLower() == "kelvin" || mSyst.ToLower() == "k")
+            {
+                a = (tempD - 273.15) * 1.8 + 32;
+                b = (tempD - 273.15);
+                answer = "To Fahrenheit: " + a + " To Celsius: " + b;
+            }
+
+
+            ViewBag.AnswerMessage2 = answer;
             return View();
         }
 

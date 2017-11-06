@@ -122,10 +122,21 @@ namespace HW4.Controllers
             return View();
         }
 
-        /*POST: Page3
-        public ActionResult Page3(int? id, int? size, string kind)
+        //POST: Page3
+        public ActionResult Page3(double amount, double interest, double term)
         {
+            //dummy vars for storing calcuations.
+            double a, b, c, d;
+            a = interest / 12;
+            b = term * 12;
+            c = (((Math.Pow((1 + a), b)) - 1) / (a * Math.Pow((1 + a), b)));
+            d = amount / c;
+
+            string explain = "The amount that you will have to pay back at the loans term end is: ";
+
+            ViewBag.Answer3 = explain + (d * a) + "";
+
             return View();
-        }*/
+        }
     }
 }

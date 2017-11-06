@@ -11,15 +11,21 @@
 <br/>
 <form action="Page3" method="post">
     <lablel for="amount">Loan Amount:</lablel><br>
-    <input type="text" name="amount" value="">
+    <input type="number" step="0.0001" name="amount" value="">
     <br>
     <lablel for="interest">Interest Rate:</lablel><br>
-    <input type="text" name="interest" value="">
+    <input type="number" step="0.0001" name="interest" value="">
     <br>
-    <lablel for="term">Length of the loan:</lablel><br>
-    <input type="text" name="term" value="">
+    <lablel for="term">Length of the loan(how long are you taking it out for?(In years)):</lablel><br>
+    <input type="number" step="0.0001" name="term" value="">
     <br><br>
     <input type="submit" value="Submit">
     <br />
 </form> 
-
+<!--The type="number" and step="0.00001" were examined in 
+    github.com/Hindelburg/Homework4/blob/master/Homework4/Views/Home/Page3.cshtml
+    and then read up on in www.w3schools.com/tags/att_input_step.asp-->
+<br /><br />
+<p>
+    @ViewBag.Answer3
+</p>

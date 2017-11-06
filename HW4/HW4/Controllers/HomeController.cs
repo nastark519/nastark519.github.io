@@ -121,5 +121,11 @@ namespace HW4.Controllers
         {
             return View();
         }
+
+        /*POST: Page3
+        public ActionResult Page3(int? id, int? size, string kind)
+        {
+            return View();
+        }*/
     }
 }

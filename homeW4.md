@@ -6,6 +6,7 @@
 
 	+ I started with making folders Home and Shared in Views
 	+ Then I made a HomeController and initialized an index page for my home landing.
+	
 	```c#
 	// GET: Home
         public ActionResult Index()
@@ -13,7 +14,9 @@
             return View();
         }
 	```
+	
 	+ I then copy this construct and changed the method name for pages 1-3 such as,
+	
 	```c#
 	// GET: Home
         public ActionResult Index()
@@ -39,8 +42,10 @@
             return View();
         }
 	```
+	
 	+ I then added the Views for those pages using the pregenerated pages. I lefted those alone for now and when back to change them as needed for later in the home work. I will also be making changes in my controller.
 	+ I next went on to my Index page and set up the unordered list to navigate the different pages.
+	
 	```c#
 	<ul>
 		<li>@Html.ActionLink("Page 1", "Page1")</li>
@@ -48,7 +53,9 @@
 		<li>@Html.ActionLink("Page 3", "Page3")</li>
 	</ul>
 	```
+	
 	+ I then added in a form for a tempeture calculater. The basics of the form were taken from <https://www.w3schools.com/tags/att_form_method.asp> and then changed for my needs.
+	
 	```html
 	<form action="Page1" method="get">
 		<lablel for="tempet">Tempeture:</lablel><br>
@@ -62,6 +69,7 @@
 	</form> 
 	```
 	+ I then changed my controller class `Page1()` method.
+	
 	```c#
 	//GET: Page1
         [HttpGet]

@@ -59,13 +59,15 @@ You may see my work done on this by visiting my repository [here](https://github
 With HomeWork 3 we had eight Primary Objectives which are listed below.
 
 1. Begin learning ASP.NET MVC 5
-2. Be able to write a simple (but multi-page) MVC web application that does not use a database
-3. Be able to use the ViewBag or ViewData
-4. Demonstrate use of the Request object to utilize query strings and form data
+2. Be able to write a simple (but multi-page) MVC web application __that does not use a database__
+3. Be able to use the "ViewBag" or "ViewData"
+4. Demonstrate use of the "Request" object to utilize query strings and form data
 5. Learn simple language constructs for the Razor view engine
 6. Understand the relationships between Model, View and Controller and be able to explain how they work together to service requests
 7. Understand the operation of controller action methods, including simple routing and parameter binding
 8. Learn to use C# language features: namespaces, optional parameters, nullable types, attributes
+
+
 You may see my work done on this by visiting my repository [here](https://github.com/nastark519/nastark519.github.io/tree/master/HW4/HW4) on github or:
 + For a walk through of my process: [HW1](/homeW4.md)
 

@@ -143,46 +143,46 @@ public ActionResult Page2()
 [HttpPost]
 public ActionResult Page2(FormCollection form)
 {
-	string answer = "Please enter a measurement and a temperature to start";
-	string mSyst = form["sysM"];
-	//get the tempeture and check if its valid. 
-	string temp = form["tempet"];
-	if (!double.TryParse(temp, out double tempD))
-	{
-		ViewBag.AnswerMessage2 = answer;
-		return View();
-	}
-	//dummy vars to do my calc. converting.
-	double a, b;
-
-	if (mSyst == null || mSyst == "")
-	{
-		ViewBag.AnswerMessage2 = answer;
-		return View();
-	}
-
-	if (mSyst.ToLower() == "fahrenheit" || mSyst.ToLower() == "f")
-	{
-		a = (tempD - 32) * 5 / 9;
-		b = (tempD + 459.67) * 5 / 9;
-		answer = "To Celsius: " + a + " To Kelvin: " + b;
-	}
-	else if (mSyst.ToLower() == "celsius" || mSyst.ToLower() == "c")
-	{
-		a = (tempD * 9 / 5) + 32;
-		b = (tempD + 273.15);
-		answer = "To Fahrenheit: " + a + " To Kelvin: " + b;
-	}
-	else if (mSyst.ToLower() == "kelvin" || mSyst.ToLower() == "k")
-	{
-		a = (tempD - 273.15) * 1.8 + 32;
-		b = (tempD - 273.15);
-		answer = "To Fahrenheit: " + a + " To Celsius: " + b;
-	}
-
-
+string answer = "Please enter a measurement and a temperature to start";
+string mSyst = form["sysM"];
+//get the tempeture and check if its valid. 
+string temp = form["tempet"];
+if (!double.TryParse(temp, out double tempD))
+{
 	ViewBag.AnswerMessage2 = answer;
 	return View();
+}
+//dummy vars to do my calc. converting.
+double a, b;
+
+if (mSyst == null || mSyst == "")
+{
+	ViewBag.AnswerMessage2 = answer;
+	return View();
+}
+
+if (mSyst.ToLower() == "fahrenheit" || mSyst.ToLower() == "f")
+{
+	a = (tempD - 32) * 5 / 9;
+	b = (tempD + 459.67) * 5 / 9;
+	answer = "To Celsius: " + a + " To Kelvin: " + b;
+}
+else if (mSyst.ToLower() == "celsius" || mSyst.ToLower() == "c")
+{
+	a = (tempD * 9 / 5) + 32;
+	b = (tempD + 273.15);
+	answer = "To Fahrenheit: " + a + " To Kelvin: " + b;
+}
+else if (mSyst.ToLower() == "kelvin" || mSyst.ToLower() == "k")
+{
+	a = (tempD - 273.15) * 1.8 + 32;
+	b = (tempD - 273.15);
+	answer = "To Fahrenheit: " + a + " To Celsius: " + b;
+}
+
+
+ViewBag.AnswerMessage2 = answer;
+return View();
 }
 
 //GET: Page3
@@ -196,34 +196,34 @@ public ActionResult Page3()
 [HttpPost]
 public ActionResult Page3(string amount, string interest, string term)
 {
-	//dummy vars for storing calcuations.
-	double e, b, c, d;
-	if (!double.TryParse(interest, out double i))
-	{
-		ViewBag.Answer3 = "This shouldn't happen....";
-		return View();
-	}
-	e = i / 12;
-	
-	if (!double.TryParse(term, out double t))
-	{
-		ViewBag.Answer3 = "This shouldn't happen....";
-		return View();
-	}
-	b = t* 12;
-	c = (((Math.Pow((1 + e), b)) - 1) / (e * Math.Pow((1 + e), b)));
-	
-	if (!double.TryParse(amount, out double a))
-	{
-		ViewBag.Answer3 = "This shouldn't happen....";
-		return View();
-	}
-	d = a / c;
-
-	string explain = "The amount that you will have to pay back at the loans term end is: ";
-
-	ViewBag.Answer3 = explain + (d * e) + "";
+//dummy vars for storing calcuations.
+double e, b, c, d;
+if (!double.TryParse(interest, out double i))
+{
+	ViewBag.Answer3 = "This shouldn't happen....";
 	return View();
+}
+e = i / 12;
+
+if (!double.TryParse(term, out double t))
+{
+	ViewBag.Answer3 = "This shouldn't happen....";
+	return View();
+}
+b = t* 12;
+c = (((Math.Pow((1 + e), b)) - 1) / (e * Math.Pow((1 + e), b)));
+
+if (!double.TryParse(amount, out double a))
+{
+	ViewBag.Answer3 = "This shouldn't happen....";
+	return View();
+}
+d = a / c;
+
+string explain = "The amount that you will have to pay back at the loans term end is: ";
+
+ViewBag.Answer3 = explain + (d * e) + "";
+return View();
 }
 ```
 	

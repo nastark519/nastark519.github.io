@@ -13,7 +13,7 @@ Bitbucket, Github or GitLab
 3. Learn HTML
 5. Learn CSS
 6. Learn Bootstrap
-7. Demonstrate you know how to "submit" 
+7. Demonstrate you know how to `submit` 
 your work to the instructor
 8. Demonstrate your understanding of the
  Portfolio plan for the class
@@ -33,7 +33,7 @@ With HomeWork 2 we had six Primary Objectives which are listed below.
 3. Understand the DOM and how to select and modify it
 4. Learn how to create HTML forms
 5. Learn how to respond to events
-6. Demonstrate using feature branches in Git: "branch", "checkout", "merge"
+6. Demonstrate using feature branches in Git: `branch`, `checkout`, `merge`
 
 
 You may see my work done on this by visiting my repository [here](https://github.com/nastark519/nastark519.github.io/tree/master/HW2) on github or:
@@ -60,8 +60,8 @@ With HomeWork 3 we had eight Primary Objectives which are listed below.
 
 1. Begin learning ASP.NET MVC 5
 2. Be able to write a simple (but multi-page) MVC web application __that does not use a database__
-3. Be able to use the "ViewBag" or "ViewData"
-4. Demonstrate use of the "Request" object to utilize query strings and form data
+3. Be able to use the `ViewBag` or `ViewData`
+4. Demonstrate use of the `Request` object to utilize query strings and form data
 5. Learn simple language constructs for the Razor view engine
 6. Understand the relationships between Model, View and Controller and be able to explain how they work together to service requests
 7. Understand the operation of controller action methods, including simple routing and parameter binding

@@ -47,11 +47,11 @@
 	+ I next went on to my Index page and set up the unordered list to navigate the different pages.
 	
 	```html
-	<ul>
-		<li>@Html.ActionLink("Page 1", "Page1")</li>
-		<li>@Html.ActionLink("Page 2", "Page2")</li>
-		<li>@Html.ActionLink("Page 3", "Page3")</li>
-	</ul>
+		<ul>
+			<li>@Html.ActionLink("Page 1", "Page1")</li>
+			<li>@Html.ActionLink("Page 2", "Page2")</li>
+			<li>@Html.ActionLink("Page 3", "Page3")</li>
+		</ul>
 	```
 	
 	+ I then added in a form for a tempeture calculater. The basics of the form were taken from w3school and then changed for my needs.

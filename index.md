@@ -37,7 +37,7 @@ With HomeWork 2 we had six Primary Objectives which are listed below.
 
 
 You may see my work done on this by visiting my repository [here](https://github.com/nastark519/nastark519.github.io/tree/master/HW2) on github or:
-+ For a walk through of my process: [HW1](/homeW2.md)
++ For a walk through of my process: [HW2](/homeW2.md)
 
 
 ### HomeWork3
@@ -51,7 +51,7 @@ With HomeWork 3 we had three Primary Objectives which are listed below.
 
 
 You may see my work done on this by visiting my repository [here](https://github.com/nastark519/nastark519.github.io/tree/master/HW3/homeWork3/homeWork3) on github or:
-+ For a walk through of my process: [HW1](/homeW3.md)
++ For a walk through of my process: [HW3](/homeW3.md)
 
 
 ### HomeWork4
@@ -69,7 +69,7 @@ With HomeWork 3 we had eight Primary Objectives which are listed below.
 
 
 You may see my work done on this by visiting my repository [here](https://github.com/nastark519/nastark519.github.io/tree/master/HW4/HW4) on github or:
-+ For a walk through of my process: [HW1](/homeW4.md)
++ For a walk through of my process: [HW4](/homeW4.md)
 
 
 ### HomeWork5

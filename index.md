@@ -38,6 +38,7 @@ With HomeWork 2 we had six Primary Objectives which are listed below.
 
 You may see my work done on this by visiting my repository [here](https://github.com/nastark519/nastark519.github.io/tree/master/HW2) on github or:
 + For a walk through of my process: [HW2](/homeW2.md)
++ and [here](https://nastark519.github.io/HW2/) it is to test out.
 
 
 ### HomeWork3

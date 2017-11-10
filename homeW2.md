@@ -6,7 +6,7 @@
 this because this has been generally the accepted practice. I have my Javascript
 and JQuery mixed as that is just the way that makes sence for writing JQuery and Javascript.
 
-		+ Using the basic constructs of Javascript you can see here, with my "if" "else" statements.
+		+ Using the basic constructs of Javascript you can see here, with my "if" "else" statements, in order to check the user inputs.
 		```javascript
 		if(nam == ""){
 			alert("Please let know what your name is.");
@@ -24,7 +24,7 @@ and JQuery mixed as that is just the way that makes sence for writing JQuery and
 				nam = $("#textBox1").val();
 		```
 ### DOM and how to select and modify it
-+ In the index page I made several "div"s with "id"s so that I could easely target them.
++ In the index page I made several "div"s with "id"s so that I could easely target them. I could have done with out those but I found it quick and easey to do it this way to learn the basics of javascript and jQuery.
 	```html
 		<div id="inputBox">
 		Here is my first text box.

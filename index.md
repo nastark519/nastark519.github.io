@@ -56,7 +56,7 @@ You may see my work done on this by visiting my repository [here](https://github
 
 ### HomeWork4
 
-With HomeWork 3 we had eight Primary Objectives which are listed below.
+With HomeWork 4 we had eight Primary Objectives which are listed below.
 
 1. Begin learning ASP.NET MVC 5
 2. Be able to write a simple (but multi-page) MVC web application __that does not use a database__
@@ -73,4 +73,28 @@ You may see my work done on this by visiting my repository [here](https://github
 
 
 ### HomeWork5
+
+With HomeWork 5 we had nine Primary Objectives which are listed below.
+
+1. Learn more ASP.NET MVC 5
+2. Be able to write a MVC web application that uses a simple one-table local database
+3. Be able to write a model class and build a strongly typed view that uses it
+4. Be able to write a model class that is backed by an Entity Framework context and a local database, and then create a view to use it in a web page
+5. Use Razor to build a table
+6. Be able to use NuGet to find and install packages
+7. Begin learning Transact-SQL
+8. Be able to write a T-SQL script to create a table and populate it with seed data
+9. Learn to use C# language features: properties, lambda functions, object initializers
+
+You may see my work done on this by visiting my repository [here](https://github.com/nastark519/nastark519.github.io/tree/master/HW5/HW5) on github or:
++ For a walk through of my process: [HW5](/homeW5.md)
+
+
+
+
+
+
+
+
+
 

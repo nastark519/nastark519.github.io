@@ -1,11 +1,12 @@
 ﻿CREATE TABLE [dbo].[stuff]
 (
 	[Id] INT NOT NULL PRIMARY KEY,
-	[dBirth] DATE NOT NULL,
-	[address] NVARCHAR (200) NOT NULL,
-	[mailingAdd] NVARCHAR (200) NULL,
-	[name] NVARCHAR (45) NOT NULL,
+	[dateOfBirth] DATE NOT NULL,
+	[newAddress] NVARCHAR (200) NOT NULL,
+	[county] NVARCHAR (45) NOT NULL,
+	[theirName] NVARCHAR (45) NOT NULL,
 	[city] NVARCHAR (45) NOT NULL,
-	[state] NVARCHAR (30) NOT NULL,
-	[zip] NVARCHAR (25) NOT NULL
-)
+	[newState] NVARCHAR (30) NOT NULL,
+	[zip] INT (25) NOT NULL,
+	[signDate] DATE NOT NULL
+);

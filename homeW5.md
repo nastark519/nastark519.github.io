@@ -3,7 +3,7 @@
 # Home Work Five
 
 
-### Working with the Database.
+### Starting point
 
 + My first step was to make the database's single table in the up.sql file and then add in the down file that drops the table.
 
@@ -35,3 +35,13 @@ GO
 DROP TABLE dbo.UPstuff;
 ```
 + I did this in notepad++ and then added it to my project in VS.
+
++ Having downloaded the data storage when I downloaded VS I used the LocalDB.
+
+### Working with the Database.
+
+
+
+
+
+

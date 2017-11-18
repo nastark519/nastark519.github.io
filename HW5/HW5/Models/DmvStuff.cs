@@ -25,6 +25,10 @@ namespace HW5.Models
         [Required]
         public string City { get; set; }
 
+        /**
+         * This will be my only none required field in my table and here
+         * this is made just for my knowledge to expand.
+         **/
         public string NewState { get; set; }
 
         [Required]

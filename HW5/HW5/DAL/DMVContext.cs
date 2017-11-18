@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Web;
+using HW5.Models;
 
 namespace HW5.DAL
 {
@@ -10,6 +11,9 @@ namespace HW5.DAL
     {
         public DMVContext() : base("name=DbStuff") { }
 
-        public virtual DbSet<DmvStuff> DmvStuff { get; set; }
+        /**
+         * Use of the Model is accessed in the type def. for DbSet<>
+         **/
+        public virtual DbSet<DmvStuff> DmvStuffs { get; set; }
     }
 }

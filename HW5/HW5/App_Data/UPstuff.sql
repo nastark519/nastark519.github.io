@@ -6,7 +6,7 @@
 	[County] VARCHAR (45) NOT NULL,
 	[FullName] VARCHAR (45) NOT NULL,
 	[City] VARCHAR (45) NOT NULL,
-	[NewState] VARCHAR (30) NOT NULL,
+	[NewState] VARCHAR (30) NULL,
 	[Zip] INT (25) NOT NULL,
 	[SignDate] DATE NOT NULL
 );

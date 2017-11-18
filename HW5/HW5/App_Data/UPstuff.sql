@@ -1,17 +1,17 @@
 ﻿CREATE TABLE [dbo].[stuff]
 (
-	[Id] INT NOT NULL PRIMARY KEY,
-	[dateOfBirth] DATE NOT NULL,
-	[newAddress] VARCHAR (200) NOT NULL,
-	[county] VARCHAR (45) NOT NULL,
-	[fullName] VARCHAR (45) NOT NULL,
-	[city] VARCHAR (45) NOT NULL,
-	[newState] VARCHAR (30) NOT NULL,
-	[zip] INT (25) NOT NULL,
-	[signDate] DATE NOT NULL
+	[ID] INT NOT NULL PRIMARY KEY,
+	[DateOfBirth] DATE NOT NULL,
+	[NewAddress] VARCHAR (200) NOT NULL,
+	[County] VARCHAR (45) NOT NULL,
+	[FullName] VARCHAR (45) NOT NULL,
+	[City] VARCHAR (45) NOT NULL,
+	[NewState] VARCHAR (30) NOT NULL,
+	[Zip] INT (25) NOT NULL,
+	[SignDate] DATE NOT NULL
 );
 
-INSERT INTO dbo.Addresses (Id, dateOfBirth, newAddress, county, fullName, city, newState, zip, signDate) VALUES
+INSERT INTO dbo.Addresses (ID, DateOfBirth, NewAddress, County, FullName, City, NewState, Zip, SignDate) VALUES
 (12345, '03/16/1990', 'Tower of the Hand', 'The Reach', 'Nathan Stark', 'Kings Landing', 'GOT', 97239, '09/27/2011'),
 (12346, '03/16/1991', '221B Baker Street', 'London', 'Amanda Stark', 'London', 'UK', 99999, '09/27/2015'),
 (12347, '09/27/1960', '2607 SW Sunset Blvd.', 'Multnoma', 'John Stark', 'Portland', 'OR', 98899, '05/10/1991'),

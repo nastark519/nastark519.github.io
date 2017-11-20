@@ -36,11 +36,17 @@ DROP TABLE dbo.UPstuff;
 ```
 + I did this in notepad++ and then added it to my project in VS.
 
-+ Having downloaded the data storage when I downloaded VS I used the LocalDB.
++ Having downloaded the data storage when I downloaded VS I'm using the LocalDB.
 
 ### Working with the Database.
 
++ added the connection string  to `Web.config`
 
+```xml
+<connectionStrings>
+    <add name="DbStuff" connectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\nstar\Desktop\CS\460\homework460\HW5\HW5\App_Data\DMVDatabase1.mdf;Integrated Security=True" providerName="System.Data.SqlClient"/>
+</connectionStrings>
+```
 
 
 

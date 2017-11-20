@@ -7,11 +7,11 @@
 	[FullName] VARCHAR (45) NOT NULL,
 	[City] VARCHAR (45) NOT NULL,
 	[NewState] VARCHAR (30) NULL,
-	[Zip] INT (25) NOT NULL,
+	[Zip] INT NOT NULL,
 	[SignDate] DATE NOT NULL
 );
 
-INSERT INTO dbo.Addresses (ID, DateOfBirth, NewAddress, County, FullName, City, NewState, Zip, SignDate) VALUES
+INSERT INTO dbo.stuff(ID, DateOfBirth, NewAddress, County, FullName, City, NewState, Zip, SignDate) VALUES
 (12345, '03/16/1990', 'Tower of the Hand', 'The Reach', 'Nathan Stark', 'Kings Landing', 'GOT', 97239, '09/27/2011'),
 (12346, '03/16/1991', '221B Baker Street', 'London', 'Amanda Stark', 'London', 'UK', 99999, '09/27/2015'),
 (12347, '09/27/1960', '2607 SW Sunset Blvd.', 'Multnoma', 'John Stark', 'Portland', 'OR', 98899, '05/10/1991'),

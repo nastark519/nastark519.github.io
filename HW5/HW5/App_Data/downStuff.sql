@@ -1,2 +1,2 @@
 
-DROP TABLE dbo.UPstuff;
+DROP TABLE dbo.stuff;

@@ -184,6 +184,11 @@
 	ViewBag.AnswerMessage2 = answer;
 	return View();
 	}
+```
+
++ Note that I chose to use a post insted of a get. I made this choise as there is no real need to save the data being pasted in a url as these are just calcuations of unimportance.
+
+```c#
 
 	//GET: Page3
 	[HttpGet]
@@ -227,7 +232,7 @@
 	}
 ```
 	
-+ The changes to the to the respective views can be viewed maybe seen in the [repository](https://github.com/nastark519/nastark519.github.io/tree/master/HW4/HW4/Views/Home)
++ The changes to the to the respective views can be seen in the [repository](https://github.com/nastark519/nastark519.github.io/tree/master/HW4/HW4/Views/Home) they are mainly trivial.
 	
 	
 

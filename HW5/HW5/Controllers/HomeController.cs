@@ -10,15 +10,22 @@ namespace HW5.Controllers
 {
     public class HomeController : Controller
     {
-        //make the database to be used.
+        //make the database to be used. Its name will be db.
         private DMVContext db = new DMVContext();
 
+        //Home page landing
         public ActionResult Index()
         {
             return View();
         }
 
+        [HttpGet]
+        public ActionResult Page1()
+        {
+            return View();
+        }
 
+        [HttpPost]
         public ActionResult Page1()
         {
             return View();

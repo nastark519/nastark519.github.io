@@ -19,12 +19,14 @@ namespace HW5.Controllers
             return View();
         }
 
+        /*Brings up the page of the form.*/
         [HttpGet]
         public ActionResult Page1()
         {
             return View();
         }
 
+        /*Posts for a change to the form.*/
         [HttpPost]
         public ActionResult Page1([Bind(Include ="ID, DateOfBirth, NewAddress, County, FullName, City, NewState, Zip, SignDate")]DmvStuff info)
         {

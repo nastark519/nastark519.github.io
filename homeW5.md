@@ -48,6 +48,38 @@ DROP TABLE dbo.UPstuff;
 </connectionStrings>
 ```
 
+### GET-POST-Redirect
+
++ I have added a `HttpPost` to my HomeController and method actions to handle pramaters that are to be pasted to the POST method.
+
+```c#
+/*Posts for a change to the form.*/
+[HttpPost]
+public ActionResult Page1([Bind(Include ="ID, DateOfBirth, NewAddress, County, FullName, City, NewState, Zip, SignDate")]DmvStuff info)
+{
+	if (ModelState.IsValid)
+	{
+		//add my this new info to the database and then save this change.
+		db.DmvStuffs.Add(info);
+		db.SaveChanges();
+		//Send user back to landing page when done.
+		return RedirectToAction("Index");
+	}
+	//otherwise stay at this view enorder to make the nessesery changes.
+	return View();
+}
+
+public ActionResult Page2()
+{
+	return View(db.DmvStuffs.ToList());
+}
+```
+
++ Note that Page2 turns the table into a list and sends it to the view.
+
+
+
+
 
 
 

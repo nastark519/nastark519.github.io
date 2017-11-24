@@ -26,14 +26,23 @@ namespace HW5.Controllers
         }
 
         [HttpPost]
-        public ActionResult Page1()
+        public ActionResult Page1([Bind(Include ="ID, DateOfBirth, NewAddress, County, FullName, City, NewState, Zip, SignDate")]DmvStuff info)
         {
+            if (ModelState.IsValid)
+            {
+                //add my this new info to the database and then save this change.
+                db.DmvStuffs.Add(info);
+                db.SaveChanges();
+                //Send user back to landing page when done.
+                return RedirectToAction("Index");
+            }
+            //otherwise stay at this view enorder to make the nessesery changes.
             return View();
         }
 
         public ActionResult Page2()
         {
-            return View();
+            return View(db.DmvStuffs.ToList());
         }
     }
 }

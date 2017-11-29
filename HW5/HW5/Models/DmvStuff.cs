@@ -8,33 +8,30 @@ namespace HW5.Models
 {
     public class DmvStuff
     {
-        [Display(Name = "")Required]
+        [Display(Name = "Customer ID"), Required]
         public int ID { get; set; }
 
-        [Required]
+        [Display(Name = "Date of Birth:"), Required]
         public DateTime DateOfBirth { get; set; }
 
-        [Required]
+        [Display(Name = "Address change to:"), Required]
         public string NewAddress { get; set; }
-
+        [Display(Name = "County"), Required]
         public string County { get; set; }
 
-        [Required]
+        [Display(Name = "Full Name:"), Required]
         public string FullName { get; set; }
 
-        [Required]
+        [Display(Name = "City"), Required]
         public string City { get; set; }
 
-        /**
-         * This will be my only none required field in my table and here
-         * this is made just for my knowledge to expand.
-         **/
+        [Display(Name = "State:"), Required]
         public string NewState { get; set; }
 
-        [Required]
+        [Display(Name = "Zip:"), Required]
         public string Zip { get; set; }
 
-        [Required]
+        [Display(Name = "Date to begin processing:"), Required]
         public DateTime SignDate { get; set; }
     }
 }

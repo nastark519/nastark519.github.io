@@ -8,7 +8,7 @@ namespace HW5.Models
 {
     public class DmvStuff
     {
-        [Required]
+        [Display(Name = "")Required]
         public int ID { get; set; }
 
         [Required]

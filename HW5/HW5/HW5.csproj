@@ -153,6 +153,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201711302224068_Initial.cs" />
+    <Compile Include="Migrations\201711302224068_Initial.Designer.cs">
+      <DependentUpon>201711302224068_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DmvStuff.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -161,6 +166,7 @@
     <Content Include="App_Data\DMVDatabase1_log.ldf">
       <DependentUpon>DMVDatabase1.mdf</DependentUpon>
     </Content>
+    <Content Include="App_Data\DownMigrat.sql" />
     <Content Include="App_Data\downStuff.sql" />
     <Content Include="App_Data\UPstuff.sql" />
     <Content Include="Content\bootstrap.css" />
@@ -200,7 +206,11 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\Home\Page2.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201711302224068_Initial.resx">
+      <DependentUpon>201711302224068_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
   </ItemGroup>

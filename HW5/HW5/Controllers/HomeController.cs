@@ -11,6 +11,7 @@ namespace HW5.Controllers
     public class HomeController : Controller
     {
         //make the database to be used. Its name will be db.
+
         private DMVContext db = new DMVContext();
 
         //Home page landing
@@ -32,7 +33,7 @@ namespace HW5.Controllers
         {
             if (ModelState.IsValid)
             {
-                //add my this new info to the database and then save this change.
+                //add the new info into the database and then save this change.
                 db.DmvStuffs.Add(info);
                 db.SaveChanges();
                 //Send user back to landing page when done.

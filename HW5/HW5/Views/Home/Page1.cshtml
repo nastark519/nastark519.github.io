@@ -6,5 +6,15 @@
 <p>This page is for you to practice changing you address
     for the DMV please provide all information requested,
     no more no less.</p>
+@*the using statement below will look for a post action
+    with the same name that on the page you are now this
+    happens when we leave the parameter blank*@
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
 
+    <div class="form-horizontal">
+        
 
+    </div>
+}

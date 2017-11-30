@@ -3,40 +3,73 @@
 @{
     ViewBag.Title = "Page2";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
 
-<p>Here we can view the table in the Database.</p>
+<h2>Page2</h2>
 
-<div class="table-div">
-    <table>
-        <tr>
-            <th>@Html.DisplayNameFor(model => model.ID)</th>
-            <th>@Html.DisplayNameFor(model => model.FullName)</th>
-            <th>@Html.DisplayNameFor(model => model.DateOfBirth)</th>
-            <th>@Html.DisplayNameFor(model => model.NewAddress)</th>
-            <th>@Html.DisplayNameFor(model => model.County)</th>
-            <th>@Html.DisplayNameFor(model => model.City)</th>
-            <th>@Html.DisplayNameFor(model => model.NewState)</th>
-            <th>@Html.DisplayNameFor(model => model.Zip)</th>
-            <th>@Html.DisplayNameFor(model => model.SignDate)</th>
-        </tr>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DateOfBirth)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NewAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.County)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FullName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.City)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NewState)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Zip)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SignDate)
+        </th>
+        <th></th>
+    </tr>
 
-        @foreach (var stuff in Model)
-        {
-            <tr>
-                <td>@Html.DisplayFor(modelStuff => stuff.ID)</td>
-                <td>@Html.DisplayFor(modelStuff => stuff.FullName)</td>
-                <td>@Html.DisplayFor(modelStuff => stuff.DateOfBirth)</td>
-                <td>@Html.DisplayFor(modelStuff => stuff.NewAddress)</td>
-                <td>@Html.DisplayFor(modelStuff => stuff.County)</td>
-                <td>@Html.DisplayFor(modelStuff => stuff.City)</td>
-                <td>@Html.DisplayFor(modelStuff => stuff.NewState)</td>
-                <td>@Html.DisplayFor(modelStuff => stuff.Zip)</td>
-                <td>@Html.DisplayFor(modelStuff => stuff.SignDate)</td>
-            </tr>
-        }
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateOfBirth)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NewAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.County)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FullName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.City)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NewState)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Zip)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SignDate)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
 
-    </table>
-
-</div>
+</table>

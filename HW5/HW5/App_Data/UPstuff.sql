@@ -1,6 +1,6 @@
-﻿CREATE TABLE [dbo].[stuff]
+﻿CREATE TABLE [dbo].[DmvStuffs]
 (
-	[ID] INT NOT NULL PRIMARY KEY,
+	[ID] INT NOT NULL,
 	[DateOfBirth] DATE NOT NULL,
 	[NewAddress] VARCHAR (200) NOT NULL,
 	[County] VARCHAR (45) NOT NULL,
@@ -8,10 +8,11 @@
 	[City] VARCHAR (45) NOT NULL,
 	[NewState] VARCHAR (30) NULL,
 	[Zip] INT NOT NULL,
-	[SignDate] DATE NOT NULL
+	[SignDate] DATE NOT NULL,
+	CONSTRAINT [PK_DmvStuffs] PRIMARY KEY (ID)
 );
 
-INSERT INTO dbo.stuff(ID, DateOfBirth, NewAddress, County, FullName, City, NewState, Zip, SignDate) VALUES
+INSERT INTO DmvStuffs(ID, DateOfBirth, NewAddress, County, FullName, City, NewState, Zip, SignDate) VALUES
 (12345, '03/16/1990', 'Tower of the Hand', 'The Reach', 'Nathan Stark', 'Kings Landing', 'GOT', 97239, '09/27/2011'),
 (12346, '03/16/1991', '221B Baker Street', 'London', 'Amanda Stark', 'London', 'UK', 99999, '09/27/2015'),
 (12347, '09/27/1960', '2607 SW Sunset Blvd.', 'Multnoma', 'John Stark', 'Portland', 'OR', 98899, '05/10/1991'),

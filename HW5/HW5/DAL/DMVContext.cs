@@ -9,7 +9,10 @@ namespace HW5.DAL
 {
     public class DMVContext : DbContext
     {
-        public DMVContext() : base("name=DMVContext") { }
+        public DMVContext() : base("name=DMVContext")
+        {
+
+        }
 
         /**
          * Use of the Model is accessed in the type def. for DbSet<>

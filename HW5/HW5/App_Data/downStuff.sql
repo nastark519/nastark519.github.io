@@ -1,2 +1,2 @@
 
-DROP TABLE dbo.stuff;
+DROP TABLE dbo.DmvStuffs;

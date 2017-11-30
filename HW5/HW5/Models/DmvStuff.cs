@@ -16,6 +16,7 @@ namespace HW5.Models
 
         [Display(Name = "Address change to:"), Required]
         public string NewAddress { get; set; }
+
         [Display(Name = "County"), Required]
         public string County { get; set; }
 

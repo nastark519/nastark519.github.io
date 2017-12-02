@@ -77,7 +77,7 @@ public ActionResult Page2()
 
 + Note that Page2 turns the table into a list and sends it to the view.
 
-![alt text](/Landing.png)
+![alt text](/Landing.PNG)
 
 
 

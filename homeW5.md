@@ -77,8 +77,19 @@ public ActionResult Page2()
 
 + Note that Page2 turns the table into a list and sends it to the view.
 
++ Below is images of the web app. working.
+
++ Here is the landing page.
+
 ![alt text](https://github.com/nastark519/nastark519.github.io/blob/master/Landing.PNG)
 
++ Here is the form.
+
+![alt text](https://github.com/nastark519/nastark519.github.io/blob/master/Form.PNG)
+
++ Lastly we have the list of addresses added correctly
+
+![alt text](https://github.com/nastark519/nastark519.github.io/blob/master/Table.PNG)
 
 
 

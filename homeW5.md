@@ -77,7 +77,7 @@ public ActionResult Page2()
 
 + Note that Page2 turns the table into a list and sends it to the view.
 
-![alt text](/Landing.PNG)
+![alt text](https://github.com/nastark519/nastark519.github.io/blob/master/Landing.PNG)
 
 
 

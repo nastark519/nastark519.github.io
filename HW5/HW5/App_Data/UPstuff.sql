@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[DmvStuffs]
 (
-	[ID] INT NOT NULL,
+	[ID] INT,
 	[DateOfBirth] DATE NOT NULL,
 	[NewAddress] VARCHAR (200) NOT NULL,
 	[County] VARCHAR (45) NOT NULL,
@@ -20,4 +20,4 @@ INSERT INTO DmvStuffs(ID, DateOfBirth, NewAddress, County, FullName, City, NewSt
 (12349, '09/27/1980', '2609 SW Sunset Blvd.', 'Multnoma', 'J. Tyler Stark', 'Portland', 'CA', 98699, '05/10/1991')
 GO
 
-
+SELECT * FROM DMVStuffs;

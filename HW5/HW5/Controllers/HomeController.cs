@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using HW5.DAL;
 using HW5.Models;
+using System.Diagnostics;
 
 namespace HW5.Controllers
 {
@@ -29,6 +30,7 @@ namespace HW5.Controllers
 
         /*Posts for a change to the form.*/
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Page1([Bind(Include ="ID, DateOfBirth, NewAddress, County, FullName, City, NewState, Zip, SignDate")]DmvStuff info)
         {
             if (ModelState.IsValid)
@@ -40,7 +42,7 @@ namespace HW5.Controllers
                 return RedirectToAction("Index");
             }
             //otherwise stay at this view enorder to make the nessesery changes.
-            return View();
+            return View(info);
         }
 
         public ActionResult Page2()

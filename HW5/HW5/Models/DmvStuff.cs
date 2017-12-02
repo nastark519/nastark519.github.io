@@ -8,6 +8,7 @@ namespace HW5.Models
 {
     public class DmvStuff
     {
+
         [Display(Name = "Customer ID"), Required]
         public int ID { get; set; }
 
@@ -30,7 +31,7 @@ namespace HW5.Models
         public string NewState { get; set; }
 
         [Display(Name = "Zip:"), Required]
-        public string Zip { get; set; }
+        public int Zip { get; set; }
 
         [Display(Name = "Date to begin processing:"), Required]
         public DateTime SignDate { get; set; }

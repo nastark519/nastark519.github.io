@@ -1,0 +1,46 @@
+﻿@model IEnumerable<HW8.Models.Artist>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ArtistName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BirthDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BirthCity)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ArtistName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BirthDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BirthCity)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ArtistKey }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ArtistKey }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ArtistKey })
+        </td>
+    </tr>
+}
+
+</table>

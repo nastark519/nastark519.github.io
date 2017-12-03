@@ -36,9 +36,6 @@ CREATE TABLE [dbo].[Classification]
 	REFERENCES dbo.Genre ([GenreKey])
 );
 
-
-
-
 INSERT INTO dbo.Artist ([Name], BirthDate, BirthCity) VALUES
 ('M.C. Escher', '1989-06-17', 'Leeuwarden, Netherlands'),
 ('Leonardo Da Vinci', '1519-05-02', 'Vinci, Italy'),

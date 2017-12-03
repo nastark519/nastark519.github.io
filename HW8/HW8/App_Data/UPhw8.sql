@@ -1,3 +1,6 @@
+/*constrain every varchar ex. [NamesOf] VARCHAR(40) NOT NULL, ... so that you can
+keep tack of whats being pop. into the tables otherwise you may lose control and you need to
+be a control freak.*/
 CREATE TABLE dbo.Artist
 (
 	[ArtistKey] INT IDENTITY(1,1) NOT NULL,

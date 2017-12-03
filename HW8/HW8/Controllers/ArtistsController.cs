@@ -20,6 +20,12 @@ namespace HW8.Controllers
             return View(db.Artists.ToList());
         }
 
+        // GET: Welcome
+        public ActionResult Welcome()
+        {
+            return View();
+        }
+
         // GET: ArtWork
         public ActionResult ArtWork()
         {

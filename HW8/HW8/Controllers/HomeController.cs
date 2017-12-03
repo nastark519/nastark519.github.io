@@ -10,7 +10,7 @@ namespace HW8.Controllers
     {
         public ActionResult Index()
         {
-            return RedirectToAction("Index", "Artists");
+            return RedirectToAction("Welcome", "Artists");
         }
 
     }

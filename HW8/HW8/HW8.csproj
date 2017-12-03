@@ -212,6 +212,7 @@
     <Content Include="Views\Artists\Index.cshtml" />
     <Content Include="Views\Artists\ArtWork.cshtml" />
     <Content Include="Views\Artists\Classifications.cshtml" />
+    <Content Include="Views\Artists\Welcome.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DAL\" />

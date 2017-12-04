@@ -66,12 +66,54 @@ namespace HW8.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "ArtistKey,ArtistName,BirthDate,BirthCity")] Artist artist)
         {
-            if (ModelState.IsValid)
+            //Vareables to check the date and compare for non-sencical dates.
+            int toDateY = DateTime.Now.Year;
+            int toDateM = DateTime.Now.Month;
+            int toDateD = DateTime.Now.Day;
+            // artBY => Artist birth year ect. ect.
+            int artBY, artBM, artBD;
+
+            string[] artDates = artist.BirthDate.Split('-');
+            // they will only parse if valide enteries
+            if(int.TryParse(artDates[0], out artBY)) { }
+            else
+            {
+                artBY = 9999;
+            }
+            if(int.TryParse(artDates[1], out artBM)) { }
+            else
+            {
+                artBM = 99;
+            }
+            if (int.TryParse(artDates[2], out artBD)) { }
+            else
+            {
+                artBD = 99;
+            }
+
+            if(artBY > toDateY)
+            {
+                TempData["alertmsg"] = "<script>alert('This is an invalide date.');</script>";
+                return View();
+
+            }else if ((artBY == toDateY) && (artBM > toDateM))
+            {
+                TempData["alertmsg"] = "<script>alert('This is an invalide date.');</script>";
+                return View();
+
+            }else if ((artBY == toDateY) && (artBM == toDateM) && (artBD > toDateD))
+            {
+                TempData["alertmsg"] = "<script>alert('This is an invalide date.');</script>";
+                return View();
+            }
+            else if (ModelState.IsValid)
             {
                 db.Artists.Add(artist);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+
+
 
             return View(artist);
         }

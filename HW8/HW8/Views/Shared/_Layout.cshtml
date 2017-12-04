@@ -20,10 +20,10 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Welcome", "Welcome", "Artists")</li>
-                    <li>@Html.ActionLink("Artists", "Index", "Artists")</li>
-                    <li>@Html.ActionLink("Art Work", "ArtWork", "Artists")</li>
-                    <li>@Html.ActionLink("Classifications", "Classifications", "Artists")</li>
+                    <li>@Html.ActionLink("Welcome", "Welcome", "Artists", null, new { @class = "navLink"})</li>
+                    <li>@Html.ActionLink("Artists", "Index", "Artists", null, new { @class = "navLink" })</li>
+                    <li>@Html.ActionLink("Art Work", "ArtWork", "Artists", null, new { @class = "navLink" })</li>
+                    <li>@Html.ActionLink("Classifications", "Classifications", "Artists", null, new { @class = "navLink" })</li>
                 </ul>
             </div>
         </div>
@@ -39,5 +39,8 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+    @RenderSection("Javascript", required: false)
+    @RenderSection("CustomScripts", required: false)
+
 </body>
 </html>

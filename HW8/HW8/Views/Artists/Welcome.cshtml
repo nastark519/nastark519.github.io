@@ -1,4 +1,9 @@
-﻿
+﻿@model IEnumerable<HW8.Models.Genre>
+@section Javascript
+ {
+    <script type="text/javascript" src="@Url.Content("/Scripts/artAjax.js")"></script>
+ }
+
 @{
     ViewBag.Title = "Welcome";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -7,3 +12,15 @@
 <h2>Welcome</h2>
 <p>This is a welcome your welcome. I hope you feel welcome.</p>
 
+@foreach (var item in Model.ToList())
+{
+    <input type="button" class="btn btn-primary" value="@item.GenreName" onclick="Ajax('@item.GenreKey');">
+}
+
+<div class="row">
+
+    <div class="col-md-6">
+        <div id="results" class="btn"></div>
+    </div>
+
+</div>

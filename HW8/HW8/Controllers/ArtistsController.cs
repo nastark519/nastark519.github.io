@@ -12,7 +12,7 @@ namespace HW8.Controllers
 {
     public class ArtistsController : Controller
     {
-        private ArtistContext db = new ArtistContext();
+        public ArtistContext db = new ArtistContext();
 
         // GET: Artists
         public ActionResult Index()
@@ -23,7 +23,21 @@ namespace HW8.Controllers
         // GET: Welcome
         public ActionResult Welcome()
         {
-            return View();
+            var genres = db.Genres;
+            return View(genres);
+        }
+
+        public JsonResult Genre(int key)
+        {
+            var artwork = db.Genres.Find(key).Classifications.ToList().OrderBy(til => til.ArtWork.Title).Select(a => new { aw = a.ArtWKey, awa = a.ArtWork.ArtistKey }).ToList();
+            string[] artworkCreator = new string[artwork.Count()];
+            for (int i = 0; i < artworkCreator.Length; ++i)
+            {
+                artworkCreator[i] = $"<ul>{db.ArtWorks.Find(artwork[i].aw).Title} by {db.Artists.Find(artwork[i].awa).ArtistName}</ul>";
+            }
+            var data = new { arr = artworkCreator };
+
+            return Json(data, JsonRequestBehavior.AllowGet);
         }
 
         // GET: ArtWork
@@ -94,19 +108,19 @@ namespace HW8.Controllers
 
             if (artBY > toDateY)
             {
-                TempData["alertmsg"] = "<script>alert('This is an invalide date.');</script>";
+                TempData["testmsg"] = "<script>alert('This is an invalide date.');</script>";
                 return View();
 
             }
             else if ((artBY == toDateY) && (artBM > toDateM))
             {
-                TempData["alertmsg"] = "<script>alert('This is an invalide date.');</script>";
+                TempData["testmsg"] = "<script>alert('This is an invalide date.');</script>";
                 return View();
 
             }
             else if ((artBY == toDateY) && (artBM == toDateM) && (artBD > toDateD))
             {
-                TempData["alertmsg"] = "<script>alert('This is an invalide date.');</script>";
+                TempData["testtmsg"] = "<script>alert('This is an invalide date.');</script>";
                 return View();
             }
             else if (ModelState.IsValid)

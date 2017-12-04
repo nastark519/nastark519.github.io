@@ -157,6 +157,7 @@
     </Compile>
     <Compile Include="Models\Artist.cs" />
     <Compile Include="Models\ArtistContext.cs" />
+    <Compile Include="Models\ArtWClass.cs" />
     <Compile Include="Models\ArtWork.cs" />
     <Compile Include="Models\Classification.cs" />
     <Compile Include="Models\Genre.cs" />

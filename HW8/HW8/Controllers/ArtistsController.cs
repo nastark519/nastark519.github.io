@@ -27,17 +27,30 @@ namespace HW8.Controllers
             return View(genres);
         }
 
-        public JsonResult Genre(int key)
+        public JsonResult Genre(int id)
         {
-            var artwork = db.Genres.Find(key).Classifications.ToList().OrderBy(til => til.ArtWork.Title).Select(a => new { aw = a.ArtWKey, awa = a.ArtWork.ArtistKey }).ToList();
-            string[] artworkCreator = new string[artwork.Count()];
-            for (int i = 0; i < artworkCreator.Length; ++i)
-            {
-                artworkCreator[i] = $"<ul>{db.ArtWorks.Find(artwork[i].aw).Title} by {db.Artists.Find(artwork[i].awa).ArtistName}</ul>";
-            }
-            var data = new { arr = artworkCreator };
+            //var artwork = db.Genres.Find(id).Classifications.ToList().OrderBy(til => til.ArtWork.Title).Select(a => new { aw = a.ArtWKey, awa = a.ArtWork.ArtistKey }).ToList();
+            //string[] artworkCreator = new string[artwork.Count()];
+            //for (int i = 0; i < artworkCreator.Length; ++i)
+            //{
+            //    artworkCreator[i] = $"<ul>{db.ArtWorks.Find(artwork[i].aw).Title} by {db.Artists.Find(artwork[i].awa).ArtistName}</ul>";
+            //}
+            //var data = new { arr = artworkCreator };
 
-            return Json(data, JsonRequestBehavior.AllowGet);
+            List<ArtWClass> list = new List<ArtWClass>();
+            var works = db.Genres.Where(g => g.GenreKey == id)
+                                .Select(c => c.Classifications)
+                                .FirstOrDefault().Select(x => new { x.ArtWork.Title, x.ArtWork.Artist.ArtistName })
+                                .ToList();
+            foreach(var v in works)
+            {
+                ArtWClass item = new ArtWClass();
+                item.artist = v.ArtistName;
+                item.title = v.Title;
+                list.Add(item);
+            }
+
+            return Json(list, JsonRequestBehavior.AllowGet);
         }
 
         // GET: ArtWork

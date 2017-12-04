@@ -17,11 +17,14 @@ function displayResults(data) {
 
     $('#results').empty();
 
-    var item = document.getElementById("results");
-
-    data.arr.forEach(function (item) {
-        $('#results').append(item);
+    //var item = document.getElementById("results");
+    $("#results").append("<p><ul>");
+    $.each(data, function (i, item) {
+        $("#results").append(
+            "<li>" + item["title"] + " by " + item["artist"] +"</li>"
+        );
     });
+    $("#results").append("</ul></p>");
 
 }
 

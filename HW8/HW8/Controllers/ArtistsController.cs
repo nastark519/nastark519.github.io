@@ -75,12 +75,12 @@ namespace HW8.Controllers
 
             string[] artDates = artist.BirthDate.Split('-');
             // they will only parse if valide enteries
-            if(int.TryParse(artDates[0], out artBY)) { }
+            if (int.TryParse(artDates[0], out artBY)) { }
             else
             {
                 artBY = 9999;
             }
-            if(int.TryParse(artDates[1], out artBM)) { }
+            if (int.TryParse(artDates[1], out artBM)) { }
             else
             {
                 artBM = 99;
@@ -91,17 +91,20 @@ namespace HW8.Controllers
                 artBD = 99;
             }
 
-            if(artBY > toDateY)
+
+            if (artBY > toDateY)
             {
                 TempData["alertmsg"] = "<script>alert('This is an invalide date.');</script>";
                 return View();
 
-            }else if ((artBY == toDateY) && (artBM > toDateM))
+            }
+            else if ((artBY == toDateY) && (artBM > toDateM))
             {
                 TempData["alertmsg"] = "<script>alert('This is an invalide date.');</script>";
                 return View();
 
-            }else if ((artBY == toDateY) && (artBM == toDateM) && (artBD > toDateD))
+            }
+            else if ((artBY == toDateY) && (artBM == toDateM) && (artBD > toDateD))
             {
                 TempData["alertmsg"] = "<script>alert('This is an invalide date.');</script>";
                 return View();

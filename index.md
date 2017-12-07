@@ -91,9 +91,19 @@ You may see my work done on this by visiting my repository [here](https://github
 + For a walk through of my process: [HW5](/homeW5.md)
 
 
+### HomeWork8
 
+With HomeWork 8 we had six Primary Objectives which are listed below.
 
+1. Be able to write a MVC web application that uses a multi-table, relational database instance that you created
+2. Be able to create models with foreign keys and navigation properties
+3. Be able to implement CRUD functionality with non-trivial models
+4. Learn to write more complex T-SQL scripts to create more complex database tables
+5. Practice more LINQ
+6. Implement custom attribute checking
 
+You may see my work done on this by visiting my repository [here](https://github.com/nastark519/nastark519.github.io/tree/master/HW8) on github or:
++ For a walk through of my process: [HW8](/homeW8.md)
 
 
 

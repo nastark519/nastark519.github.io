@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<div class="row">
+    <div class="col-lg-12">
+        <input class="form-control" type="text" id="search" />
+        <input class="btn btn-primary" type="button" id="button" value="Search" />
+        <select class="form-control">
+            <option value="g">G</option>
+            <option value="pg">PG</option>
+            <option value="r">R</option>
+        </select>
+        <input id="playpause" type="button" class="btn btn-default" value="Pause"/>
+    </div>
+</div>
+
+<div class="row">
+    <div id="images" class="col-lg-12">
+
+    </div>
+</div>
+@section Scripts{
+    
+    <script src="~/Scripts/search.js"></script>    
+}

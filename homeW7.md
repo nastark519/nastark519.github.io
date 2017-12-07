@@ -134,7 +134,7 @@ create table log (
 
 ```
 
-![Image] (https://github.com/nastark519/nastark519.github.io/blob/master/Capture.PNG?raw=true)
++ Here is an [Image](https://github.com/nastark519/nastark519.github.io/blob/master/Capture.PNG?raw=true) of the table after a few searches.
 
 + I added a play pause button to my page because I used `downsized_small.mp4` which uses short videos. the code for this is above in the javascript/AJAX section.
 

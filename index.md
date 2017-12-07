@@ -91,6 +91,19 @@ You may see my work done on this by visiting my repository [here](https://github
 + For a walk through of my process: [HW5](/homeW5.md)
 
 
+### HomeWork7
+
+With HomeWork 7 we had four Primary Objectives which are listed below.
+
+1. Be able to write a MVC web application that employs AJAX to build responsive views
+2. Learn how to use an existing API to acquire data, serverside
+3. Demonstrate the use of JSON and AJAX
+4. Demonstrate custom routing URLs
+
+You may see my work done on this by visiting my repository [here](https://github.com/nastark519/nastark519.github.io/tree/master/HW7) on github or:
++ For a walk through of my process: [HW7](/homeW7.md)
+
+
 ### HomeWork8
 
 With HomeWork 8 we had six Primary Objectives which are listed below.

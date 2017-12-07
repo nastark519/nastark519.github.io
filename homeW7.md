@@ -134,6 +134,11 @@ create table log (
 
 ```
 
+![alt text] (https://github.com/nastark519/nastark519.github.io/blob/master/Capture.PNG)
+
++ I added a play pause button to my page because I used `downsized_small.mp4` which uses short videos. the code for this is above in the javascript/AJAX section.
+
+
 
 
 

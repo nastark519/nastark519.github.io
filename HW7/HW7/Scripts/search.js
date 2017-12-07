@@ -14,7 +14,7 @@
 
 function display(data) {
     $("#images").empty();
-    $.each(data, function (i, video) {
+    $.each(data, function (i, video) {// create a space for my videos.
         $("#images").append(
             "<div class='video'>"
             + "<video loop autoplay>"
@@ -29,7 +29,7 @@ function display(data) {
 
 
 $("#playpause").click(function () {
-    if ($("#playpause").val() == "Pause") {
+    if ($("#playpause").val() == "Pause") {// Knowing that 25 objects will be returned this will loop through and pauses the videos.
         for (var i = 0; i < 25; i++) {
             $("video").get(i).pause();
         }
@@ -37,7 +37,7 @@ $("#playpause").click(function () {
         $("#playpause").attr("value", "Play");
     }
     else {
-        for (var i = 0; i < 25; i++) {
+        for (var i = 0; i < 25; i++) {// Knowing that 25 objects will be returned this will loop through and plays the videos.
             $("video").get(i).play();
         }
         $("#playpause").attr("value", "Pause");

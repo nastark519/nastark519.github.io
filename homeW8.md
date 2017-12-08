@@ -108,9 +108,113 @@ GO
 
     + I did this by going into my "Solution Explorer" scrolling down to the "Models" folder `right clicking` selecting `new item...`
     + This opened up a new window from wwich I selected from the "Data" link on the left I was then presented with a list of choises from which I chose "ADO.NET Entity Data Model"
-    + I then entered the information needed for my context class and with that
+    + I then entered the information needed for my context class.
+
++ I then added attribute checking to my Edit page.
+
+    + Below is a check in the Model to so that the name is not longer than 50 characters.
+
+```c#
+
+	[Required]
+	[StringLength(45)]
+	public string ArtistName { get; set; }
+```
+
+    + To make sure that the birthday couldn't be in the future I added in a lot of code in the controller inorder to parse through the string and to and check that it is a proper input.
+
+```c#
+//Vareables to check the date and compare for non-sencical dates.
+	int toDateY = DateTime.Now.Year;
+	int toDateM = DateTime.Now.Month;
+	int toDateD = DateTime.Now.Day;
+	// artBY => Artist birth year ect. ect.
+	int artBY, artBM, artBD;
+
+	string[] artDates = artist.BirthDate.Split('-');
+	// they will only parse if valide enteries
+	if (int.TryParse(artDates[0], out artBY)) { }
+	else
+	{
+		artBY = 9999;
+	}
+	if (int.TryParse(artDates[1], out artBM)) { }
+	else
+	{
+		artBM = 99;
+	}
+	if (int.TryParse(artDates[2], out artBD)) { }
+	else
+	{
+		artBD = 99;
+	}
 
 
+	if (artBY > toDateY)
+	{
+		TempData["testmsg"] = "<script>alert('This is an invalide date.');</script>";
+		return View();
+
+	}
+	else if ((artBY == toDateY) && (artBM > toDateM))
+	{
+		TempData["testmsg"] = "<script>alert('This is an invalide date.');</script>";
+		return View();
+
+	}
+	else if ((artBY == toDateY) && (artBM == toDateM) && (artBD > toDateD))
+	{
+		TempData["testtmsg"] = "<script>alert('This is an invalide date.');</script>";
+		return View();
+	}
+	else if (ModelState.IsValid)
+	{
+		db.Artists.Add(artist);
+		db.SaveChanges();
+		return RedirectToAction("Index");
+	}
+
+```
+
++ Below is the Ajax.
+
+```javascript
+
+function Ajax(id) {
+    var source = "/Artists/Genre/" + id;
+    console.log(source);
+    $.ajax({
+        type: "GET",
+        dataType: "json",
+        data: { id: id },
+        url: source,
+        success: displayResults,
+        error: errorOnAjax
+    });
+}
+
+function displayResults(data) {
+    console.log("AJAX Success!");
+    console.log(data);
+
+    $('#results').empty();
+
+    //var item = document.getElementById("results");
+    $("#results").append("<p><ul>");
+    $.each(data, function (i, item) {
+        $("#results").append(
+            "<li>" + item["title"] + " by " + item["artist"] +"</li>"
+        );
+    });
+    $("#results").append("</ul></p>");
+
+}
+
+function errorOnAjax() {
+    console.log("Error");
+}
+
+```
 
 
 

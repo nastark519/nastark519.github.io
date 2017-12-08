@@ -118,8 +118,15 @@ With HomeWork 8 we had six Primary Objectives which are listed below.
 You may see my work done on this by visiting my repository [here](https://github.com/nastark519/nastark519.github.io/tree/master/HW8) on github or:
 + For a walk through of my process: [HW8](/homeW8.md)
 
+### HomeWork9
 
+With HomeWork 9 we had two Primary Objectives which are listed below.
 
+1. Be able to write a complex MVC web application and deploy to the cloud
+2. Learn how to provision and deploy a database to the cloud
+
+There is no git repo for this Home Work do to the zero amount of code that was needed to be written or generated.
++ For a walk through of my process: [HW9](/homeW9.md)
 
 
 

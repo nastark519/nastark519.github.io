@@ -17,19 +17,43 @@
 
     + Name the Database and the create a new Resource group.
     
-    + [Image of the above step.](https://github.com/nastark519/nastark519.github.io/blob/master/hw9second.PNG?raw=true)
+    + [Image of the above step.](https://github.com/nastark519/nastark519.github.io/blob/master/hw9six.PNG?raw=true)
 
-    + Since I can only have one Free database as per the Microsoft Imagine insted of the pay as you go Microsoft Azure.
-    
-    + I have deployed on the cloud for this home work thought I had to take this site down in order to deploy for the final and was told that I need to keep the final deployed to through friday, 12/08/2017, thus I will redeploy on the fallowing Saturday, 12/09/2017. Also the following screen shots will show deployment.
-    
     + I the created a server. At this point it is importand to use a admin name and password that you will need to remember.
+
+    + [Image of the above step.](https://github.com/nastark519/nastark519.github.io/blob/master/hw9seven.PNG?raw=true)
 
 + Then I went back to the Visual Studio project to connect and run the sql up file to setup and seed the database on Azure.
 
+    + [Image of the above step.](https://github.com/nastark519/nastark519.github.io/blob/master/hw9two.PNG?raw=true)
+
     + For this the admin name and password were needed. Aswell as the Database name that we set up in Azure.
 
-    + [Image of the above step.](https://github.com/nastark519/nastark519.github.io/blob/master/hw9second.PNG?raw=true)
++ At this point I went back to Azure and clicked on the "App Services" then clicked "Add" went to the "Web App" and went to create a new one.
+
++ [Image of the above step.](https://github.com/nastark519/nastark519.github.io/blob/master/hw9eight.PNG?raw=true)
+
++ I then whent back to Visual Studio right clicked the project's name which is HW8 for the web app we are creating and went to "Publish" I then selected web app that I set up for the project.
+
+    + [Image of the above step.](https://github.com/nastark519/nastark519.github.io/blob/master/hw9nine.PNG?raw=true)
+
+    + The website will not work yet.
+
++ I then went back to Azure and the Database set up there. I then went to copie the connection string.
+
+    + Going next to "App Services" and scrolled down to "Application Settings" and scroll down and enter the co string that you copied into the value field and the name of the context class into the name field.
+
+        + Don't for get to add the admin name you created and the password you created into the connection string for the User ID and Password field. Delete the brackets{}{}.
+
+Awsome website [here](http://hw9art.azurewebsites.net/Artists/Welcome)
+
+
+
+
+
+
+
+
 
 
 

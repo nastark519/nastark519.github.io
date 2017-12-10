@@ -151,6 +151,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ArtistsController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -163,10 +164,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\ArtDatabase.mdf" />
-    <Content Include="App_Data\ArtDatabase_log.ldf">
-      <DependentUpon>ArtDatabase.mdf</DependentUpon>
-    </Content>
     <Content Include="App_Data\DOWNhw8.sql" />
     <Content Include="App_Data\UPhw8.sql" />
     <Content Include="Content\bootstrap.css" />
@@ -213,7 +210,9 @@
     <Content Include="Views\Artists\Classifications.cshtml" />
     <Content Include="Views\Artists\Welcome.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Views\Home\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
   </ItemGroup>

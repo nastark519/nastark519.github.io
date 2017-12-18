@@ -20,7 +20,7 @@ your work to the instructor
  
  
 You may see my work done on this by visiting my repository [here](https://github.com/nastark519/HW460) on github or:
-+ You my visit the webpage its self: [Nate's webpage](https://nastark519.github.io/HW460/index.html) or,
++ You my visit the webpage its self: [Nate's webpage](https://nastark519.github.io/HW1/index.html) or,
 + For a walk through of my process: [HW1](/homeW1.md)
 
 

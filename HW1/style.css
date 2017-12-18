@@ -1,0 +1,74 @@
+
+#container {
+	width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #0074D9;
+}
+#header {
+	margin-left: 50px;
+	margin-right: 50px;
+	text-align: center;
+	background-color: #DDD;
+}
+
+#objec{
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+#workHistory{
+	margin-left: 50px;
+	margin-right: auto;
+}
+
+#specialize{
+	padding-right:200px;
+	margin-left: 50px;
+	margin-right: 50px;
+	margin-bottom: 350px;
+}
+	
+#education{
+	margin-left: auto;
+	margin-right: auto;
+	float: left;
+	
+}
+
+#skills{
+	margin-right: auto;
+	margin-left: auto;
+	float: right;
+}
+#explanation,
+html{
+	min-hieght: 100%;
+}
+#explanation{
+	padding-top: 250px;
+	padding-bottom: 500px;
+	background-image: url("http://nastark519.github.io/HW460/AmandaandNathanWedding301.JPG");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.topper{
+	font-family: Courier New, Georgia;
+	text-align: center;
+	color: #FFF;
+}
+#entertainment{
+	padding: 50px;
+}
+
+#ranking{
+	float: right;
+}
+#occupy{
+	float: left;
+}
+#references{
+	background-color: pink;
+}
